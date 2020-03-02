@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BrowseCard from './BrowseCard';
 import BrowseHeader from './BrowseHeader';
+import IndividualCard from './IndividualCard';
 import axios from 'axios';
 
 
@@ -30,6 +31,8 @@ const Browse = () => {
         <div>
             <BrowseHeader />
             <BrowseCard strain={strain} setStrain={setStrain}/>
+            <IndividualCard />
+
           
      
             
