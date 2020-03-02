@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.browse-header{
+  background-image: url('med-cabinet/public/img/header_img.jpg');
+}
