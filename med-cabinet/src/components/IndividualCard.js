@@ -21,21 +21,23 @@ const NewCardBody = styled(CardBody)`
   align-items: center;
 `;
 
-const TopCard = (props) => {
+const IndividualCard = (props) => {
     return (
-        <NewDiv className='character-container'>
+        <NewDiv >
           {props.strain.map((elem, i) => (
           <NewCard key={i}>
             <CardImg top width="100%" src={elem.image} alt={elem.name} />
             <NewCardBody>
               <CardTitle>{elem.name}</CardTitle>
-              <CardSubtitle>Species: {elem.species}</CardSubtitle>
-              <CardText>Gender: {elem.gender}</CardText>
+              <CardSubtitle>Strain: {elem.species}</CardSubtitle>
+              <CardText>Hybrid/Sativa: {elem.gender}</CardText>
             </NewCardBody>
+          <button type='button'>Favorite</button>
+          <button type='button'>Share</button>
           </NewCard>
           ))}
         </NewDiv>
       );
 };
 
-export default TopCard;
+export default IndividualCard;

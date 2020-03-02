@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import TopCard from './TopCard';
+import IndividualCard from './IndividualCard';
 import axios from 'axios';
 
 
@@ -7,7 +7,7 @@ import axios from 'axios';
 const Browse = () => {
     
     const [strain, setStrain] = useState([]);
-    const [page, setPage] = useState(1);
+    
 
     useEffect(() => {
         axios.get('https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/')
@@ -20,25 +20,13 @@ const Browse = () => {
              })
       }, [])
     
-      useEffect(() => {
-        axios
-            .get(`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/?page=${page}`)
-            .then(res => {
-                console.log(res.data.results);
-                setStrain(res.data.results);
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    }, [page])
-    
     
     
     
     
     return (
         <div>
-            <TopCard strain={strain} setStrain={setStrain}/>
+            <IndividualCard strain={strain} setStrain={setStrain}/>
             
         </div>
     );
