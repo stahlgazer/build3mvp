@@ -19,12 +19,12 @@ const InnerDiv = styled.div`
 `;
 
 const HeaderH1 = styled.h1`
-    color: #5fb2d7;
+    color: #2f5973;
 `;
 
 const HeaderButton = styled.button`
     width: 30%;
-    background-color: #2f5973;
+    background-color: #70bccf;
     color: white;
     border-radius: 5%;
 `;
