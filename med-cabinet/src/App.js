@@ -1,15 +1,29 @@
 import React from "react";
-import "./App.css";
-import { BrowserRouter as Router, Route, Switch, Link, NavLink, Redirect } from "react-router-dom";
-// import Contact from './components/Contact';
+import { Route, NavLink } from "react-router-dom";
+
+import Register from "./components/Register";
+import Login from "./components/Login";
+import NavigationBar from "./components/NavigationBar";
+import Browse from './components/Browse';
 
 function App() {
   return (
-    <Router>
     <div className="App">
-      test
+      <NavigationBar>
+        <NavLink to='/login'>Login</NavLink>
+        <NavLink to='/register'>Register</NavLink>
+      </NavigationBar>
+      
+      <Route path="/register">
+        <Register />
+      </Route>
+      <Route path="login">
+        <Login />
+      </Route>
+      <Route path="/browse">
+        <Browse />
+      </Route>
     </div>
-    </Router>
   );
 }
 
