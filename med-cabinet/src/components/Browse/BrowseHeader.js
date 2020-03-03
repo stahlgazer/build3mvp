@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from '../img/header_img.jpg';
+import Image from '../../img/header_img.jpg';
 
 const NewDiv = styled.div`
     display: flex;

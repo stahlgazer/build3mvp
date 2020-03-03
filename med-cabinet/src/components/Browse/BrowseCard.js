@@ -15,6 +15,11 @@ const NewDiv = styled.div`
   flex-wrap: wrap;
 `;
 
+const ButtonDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const NewCardBody = styled(CardBody)`
   display: flex;
   flex-direction: column;
@@ -34,12 +39,17 @@ const IndividualCard = (props) => {
           <NewCard key={i}>
             <CardImg top width="100%" src={elem.image} alt={elem.name} />
             <NewCardBody>
-              <CardTitle>{elem.name}</CardTitle>
-              <CardSubtitle>Strain: {elem.species}</CardSubtitle>
-              <CardText>Hybrid/Sativa: {elem.gender}</CardText>
+              <CardTitle>Strain: {elem.name}</CardTitle>
+              <CardSubtitle>Type: {elem.species}</CardSubtitle>
+              <CardText>Rating: {elem.gender}</CardText>
+              <CardText>Effects: {elem.gender}</CardText>
+              <CardText>Flavor: {elem.gender}</CardText>
+              <CardText>Description: {elem.gender}</CardText>
             </NewCardBody>
-          <BrowseButton type='button'>Favorite</BrowseButton>
+          <ButtonDiv>
+          <BrowseButton type='button'>Add To Favorites</BrowseButton>
           <BrowseButton type='button'>Share</BrowseButton>
+          </ButtonDiv>
           </NewCard>
           ))}
         </NewDiv>

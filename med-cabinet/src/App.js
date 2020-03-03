@@ -4,7 +4,7 @@ import { Route, NavLink } from "react-router-dom";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
-import Browse from "./components/Browse";
+import Browse from './components/Browse/Browse';
 
 function App() {
   return (
