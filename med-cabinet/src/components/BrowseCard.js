@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle
+  CardTitle, CardSubtitle,
 } from 'reactstrap';
 import styled from 'styled-components';
 
@@ -38,7 +38,7 @@ const IndividualCard = (props) => {
               <CardSubtitle>Strain: {elem.species}</CardSubtitle>
               <CardText>Hybrid/Sativa: {elem.gender}</CardText>
             </NewCardBody>
-          <BrowseButton type='button'>Add To Favorites</BrowseButton>
+          <BrowseButton type='button'>Favorite</BrowseButton>
           <BrowseButton type='button'>Share</BrowseButton>
           </NewCard>
           ))}
