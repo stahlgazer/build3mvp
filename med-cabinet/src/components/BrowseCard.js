@@ -38,7 +38,7 @@ const IndividualCard = (props) => {
               <CardSubtitle>Strain: {elem.species}</CardSubtitle>
               <CardText>Hybrid/Sativa: {elem.gender}</CardText>
             </NewCardBody>
-          <BrowseButton type='button'>Favorite</BrowseButton>
+          <BrowseButton type='button'>Add To Favorites</BrowseButton>
           <BrowseButton type='button'>Share</BrowseButton>
           </NewCard>
           ))}
