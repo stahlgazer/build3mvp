@@ -21,6 +21,12 @@ const NewCardBody = styled(CardBody)`
   align-items: center;
 `;
 
+const BrowseButton = styled.button`
+  width: 30%;
+  color: white;
+  background-color: #2f5973;
+`;
+
 const IndividualCard = (props) => {
     return (
         <NewDiv >
@@ -32,8 +38,8 @@ const IndividualCard = (props) => {
               <CardSubtitle>Strain: {elem.species}</CardSubtitle>
               <CardText>Hybrid/Sativa: {elem.gender}</CardText>
             </NewCardBody>
-          <button type='button'>Favorite</button>
-          <button type='button'>Share</button>
+          <BrowseButton type='button'>Favorite</BrowseButton>
+          <BrowseButton type='button'>Share</BrowseButton>
           </NewCard>
           ))}
         </NewDiv>
