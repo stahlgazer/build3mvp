@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
 const Login = () => {
   const classes = useStyles();
   return (
+<<<<<<< Updated upstream
     <div className={classes.root}>
         <div className={classes.registerBox}>
           <LoginForm />
@@ -28,5 +29,21 @@ const Login = () => {
     </div>
   )
 }
+=======
+    <form className="gavforms" onSubmit={handleSubmit} name="login">
+      <h3>Log In For Full Access</h3>
+      <label className="gavlabels" htmlFor="username">
+        Username:{" "}
+      </label>
+      <input
+        className="gavinputs"
+        required
+        type="text"
+        name="username"
+        placeholder="JohnSmith"
+        value={userData.username}
+        onChange={handleChange}
+      />
+>>>>>>> Stashed changes
 
 export default Login

@@ -11,6 +11,11 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "formik": "^2.1.4",
+<<<<<<< Updated upstream
+=======
+    "styled-components": "^5.0.1",
+    "yup": "^0.28.1",
+>>>>>>> Stashed changes
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
