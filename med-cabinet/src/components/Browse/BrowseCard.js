@@ -24,12 +24,13 @@ const NewCardBody = styled(CardBody)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #2F5973;
 `;
 
 const BrowseButton = styled.button`
   width: 30%;
   color: white;
-  background-color: #2f5973;
+  background-color: #70bccf;
 `;
 
 const IndividualCard = (props) => {
