@@ -15,22 +15,16 @@ const NewDiv = styled.div`
   flex-wrap: wrap;
 `;
 
-const ButtonDiv = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
 const NewCardBody = styled(CardBody)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #2F5973;
 `;
 
 const BrowseButton = styled.button`
   width: 30%;
   color: white;
-  background-color: #70bccf;
+  background-color: #2f5973;
 `;
 
 const IndividualCard = (props) => {
@@ -40,17 +34,12 @@ const IndividualCard = (props) => {
           <NewCard key={i}>
             <CardImg top width="100%" src={elem.image} alt={elem.name} />
             <NewCardBody>
-              <CardTitle>Strain: {elem.name}</CardTitle>
-              <CardSubtitle>Type: {elem.species}</CardSubtitle>
-              <CardText>Rating: {elem.gender}</CardText>
-              <CardText>Effects: {elem.gender}</CardText>
-              <CardText>Flavor: {elem.gender}</CardText>
-              <CardText>Description: {elem.gender}</CardText>
+              <CardTitle>{elem.name}</CardTitle>
+              <CardSubtitle>Strain: {elem.species}</CardSubtitle>
+              <CardText>Hybrid/Sativa: {elem.gender}</CardText>
             </NewCardBody>
-          <ButtonDiv>
-          <BrowseButton type='button'>Add To Favorites</BrowseButton>
-          <BrowseButton type='button'>Learn More</BrowseButton>
-          </ButtonDiv>
+          <BrowseButton type='button'>Favorite</BrowseButton>
+          <BrowseButton type='button'>Share</BrowseButton>
           </NewCard>
           ))}
         </NewDiv>

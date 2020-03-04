@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 // ACTIONS HERE TO ADD OR REMOVE A FAVORITE STRAIN
 
 // need to connect to store
@@ -15,4 +13,3 @@ export function addFavorite(elem) {
 // export function updateUser(user) {
 //     return { type: "UPDATE_USER", payload: user }
 // }
->>>>>>> Stashed changes

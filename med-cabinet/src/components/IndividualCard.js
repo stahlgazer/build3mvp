@@ -10,25 +10,19 @@ const ImgDiv = styled.div`
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin-right: 2%;
+    margin-right: 5%;
 `;
 
 const AboutDiv = styled.div`
     text-align: left;
     width: 40%;
-    margin-left: 2%;
+    margin-left: 5%;
     color: #2f5973
-`;
-
-const ButtonDiv = styled.div`
-    display: flex;
-    justify-content: center;
 `;
 
 const ImgButton = styled.button`
     width: 35%;
     margin: 2%;
-    font-size: 1rem;
     color: white;
     background-color: #70bccf;
     border-radius: 4%;
@@ -44,20 +38,19 @@ const IndividualCard = (props) => {
         <Section>
             <ImgDiv>
                 <img src={Sample} alt=''/>
-                <ButtonDiv>
+                <div>
                     <ImgButton type='button'>Favorite</ImgButton>
                     <ImgButton type='button'>Share</ImgButton>
-                </ButtonDiv>  
+                </div>  
             </ImgDiv>
             <AboutDiv>
-                <h1>Strain: White-Widow</h1>
-                <h3>Type: Hybrid</h3>
-                <h3>Rating:</h3>
+                <h1>Blue Dream</h1>
+                <h3>Common Effects</h3>
+                    <p>Relaxed, Happy, Uplifted, Euphoric, Creative</p>
+                <h3>Tastes and Flavors</h3>
+                    <p>Blueberry, Berry, Sweet</p>
+                <h3>Details</h3>
                     <p></p>
-                <h3>Effects:</h3>
-                    <p>Creative, Energetic, Tingly, Euphoric, Relaxed</p>
-                <h3>Flavor:</h3>
-                    <p>Earthy, Sweet, Citrus</p>
             </AboutDiv>
         </Section>
     );

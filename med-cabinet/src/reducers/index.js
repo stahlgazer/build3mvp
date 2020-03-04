@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 //test reducer to initialize store
 
 const initialState = {
@@ -22,4 +20,3 @@ const initialState = {
         return state;
     }
   };
->>>>>>> Stashed changes
