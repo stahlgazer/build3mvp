@@ -49,7 +49,7 @@ const IndividualCard = (props) => {
             </NewCardBody>
           <ButtonDiv>
           <BrowseButton type='button'>Add To Favorites</BrowseButton>
-          <BrowseButton type='button'>Share</BrowseButton>
+          <BrowseButton type='button'>Learn More</BrowseButton>
           </ButtonDiv>
           </NewCard>
           ))}

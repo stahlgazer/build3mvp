@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from '../../img/header_img.jpg';
-
+import { Link } from 'react-router-dom';
 const NewDiv = styled.div`
     display: flex;
     flex-direction: column;
@@ -36,7 +36,9 @@ const BrowseHeader = () => {
             <InnerDiv>
                 <HeaderH1>The Cannabis Guide<br>
                 </br>Just For You</HeaderH1>
-                <HeaderButton type='button'>Learn More</HeaderButton>
+                <Link to='/register'>
+                    <HeaderButton type='button'>Sign Up</HeaderButton>
+                </Link>
             </InnerDiv>
         </NewDiv>
     );
