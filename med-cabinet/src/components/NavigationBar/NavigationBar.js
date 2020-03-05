@@ -59,15 +59,6 @@ const NavigationBar = props => {
         <NavLink className={classes.links} to="/contact">
           Contact
         </NavLink>
-        {/* will link to UI marketing page */}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://google.com"
-          className={classes.links}
-        >
-          Marketing
-        </a>
       </div>
 
       <Avatar className={classes.orange} />

@@ -1,9 +1,16 @@
-import React from 'react';
+import React from "react";
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle,
-} from 'reactstrap';
-import styled from 'styled-components';
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle
+} from "reactstrap";
+import styled from "styled-components";
+import { addFavorite } from "../actions/index";
+import { connect } from "react-redux";
+import axiosWithAuth from "../utils/axiosWithAuth";
 
 const NewCard = styled(Card)`
   width: 30%;
@@ -27,10 +34,24 @@ const BrowseButton = styled.button`
   background-color: #2f5973;
 `;
 
-const IndividualCard = (props) => {
-    return (
-        <NewDiv >
-          {props.strain.map((elem, i) => (
+const BrowseCard = props => {
+  const addSubmit = elem => {
+    //post here
+    axiosWithAuth()
+      .post(`/users/${localStorage.getItem("ID")}/favs`, elem)
+      .then(response => {
+        console.log("added fav:", response.data);
+      })
+      .catch(error => {
+        console.log("added fav error:", error);
+      });
+  };
+
+  return (
+    <>
+      {/* string form here */}
+      <NewDiv>
+        {props.strain.map((elem, i) => (
           <NewCard key={i}>
             <CardImg top width="100%" src={elem.image} alt={elem.name} />
             <NewCardBody>
@@ -38,12 +59,27 @@ const IndividualCard = (props) => {
               <CardSubtitle>Strain: {elem.species}</CardSubtitle>
               <CardText>Hybrid/Sativa: {elem.gender}</CardText>
             </NewCardBody>
-          <BrowseButton type='button'>Favorite</BrowseButton>
-          <BrowseButton type='button'>Share</BrowseButton>
+            <BrowseButton
+              type="button"
+              onClick={() => {
+                props.addFavorite(elem);
+                addSubmit(elem);
+              }}
+            >
+              Favorite
+            </BrowseButton>
+            <BrowseButton type="button">Share</BrowseButton>
           </NewCard>
-          ))}
-        </NewDiv>
-      );
+        ))}
+      </NewDiv>
+    </>
+  );
 };
 
-export default IndividualCard;
+const mapStateToProps = state => {
+  return {
+    favorites: state.favorites
+  };
+};
+
+export default connect(mapStateToProps, { addFavorite })(BrowseCard);
