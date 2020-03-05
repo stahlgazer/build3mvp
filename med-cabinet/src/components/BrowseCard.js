@@ -32,11 +32,12 @@ const IndividualCard = (props) => {
         <NewDiv >
           {props.strain.map((elem, i) => (
           <NewCard key={i}>
-            <CardImg top width="100%" src={elem.image} alt={elem.name} />
             <NewCardBody>
-              <CardTitle>{elem.name}</CardTitle>
-              <CardSubtitle>Strain: {elem.species}</CardSubtitle>
-              <CardText>Hybrid/Sativa: {elem.gender}</CardText>
+              <CardTitle>Strain:{elem.Strain}</CardTitle>
+              <CardSubtitle>Type: {elem.Type}</CardSubtitle>
+              <CardText>Flavors: {elem.Flavor}</CardText>
+              <CardText>Effects: {elem.Effects}</CardText>
+              <CardText>Description: {elem.Description}</CardText>
             </NewCardBody>
           <BrowseButton type='button'>Favorite</BrowseButton>
           <BrowseButton type='button'>Share</BrowseButton>
